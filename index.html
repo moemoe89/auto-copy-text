@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Copy Text</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const textToCopy = "Your text goes here";
+
+            // Function to copy text to clipboard
+            function copyToClipboard(text) {
+                navigator.clipboard.writeText(text).then(() => {
+                    console.log('Text copied to clipboard');
+                }).catch(err => {
+                    console.error('Failed to copy text: ', err);
+                });
+            }
+
+            // Copy text when the page is loaded
+            copyToClipboard(textToCopy);
+        });
+    </script>
+</head>
+<body>
+<h1>Auto Copy Text</h1>
+<p>The text has been copied to your clipboard!</p>
+</body>
+</html>
