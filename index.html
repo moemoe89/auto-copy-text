@@ -20,7 +20,7 @@
 <body>
 <h1>Auto Copy Text</h1>
 <!-- Button with data-clipboard-text attribute -->
-<button class="btn" data-clipboard-text="Your text goes here!" id="copy-button">Copy</button>
+<button class="btn" data-clipboard-text="##12345" id="copy-button">Copy</button>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -29,6 +29,8 @@
         clipboard.on('success', function(e) {
             console.log('Text copied to clipboard:', e.text);
             // Optionally, you can display a success message or perform other actions here
+
+            window.location.href = "https://ig.me/m/madhurkhanna1q";
         });
 
         clipboard.on('error', function(e) {
